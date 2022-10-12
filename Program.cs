@@ -50,13 +50,37 @@
 // 6, 1, 33 -> [6, 1, 33]
 
 
-int[] array = new int[8];
-GetBinnaryarray(array.Length);
-Console.WriteLine($"[{String.Join(",", array)}]");
+// int[] array = new int[8];
+// GetBinnaryarray(array.Length);
+// Console.WriteLine($"[{String.Join(",", array)}]");
 
-void GetBinnaryarray(int size){
-    for(int i = 0; i < size; i++){
-    array[i] = new Random().Next(0,100);
-   }
-}
+// void GetBinnaryarray(int size){
+//     for(int i = 0; i < size; i++){
+//     array[i] = new Random().Next(0,100);
+//    }
+// }
 
+
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+
+Console.WriteLine("Введите число А");
+int numbA = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите число В");
+int numbB = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"Число {numbA} в степени {numbB} = {Exponentation(numbA)}");
+
+int Exponentation(int number){
+    int Exp = 1;
+    for(int i = 0; i < numbB; i++){
+        Exp *= numbA;
+    }
+    return Exp;
+}    
